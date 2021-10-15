@@ -1,0 +1,6 @@
+[servers]
+        [servers.ovh]
+                ip = "51.222.139.35"
+                username = "dominic"
+                description = "Main server"
+                key_file = "~/.ssh/id_rsa"
