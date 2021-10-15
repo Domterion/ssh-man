@@ -20,7 +20,7 @@ pub struct ServerConfig {
 impl fmt::Display for Config {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         for (name, server) in &self.servers {
-            write!(f, "[{}] {}", name, server);
+            write!(f, "[{}] {}\n", name, server);
         }
         write!(f, "")
     }
@@ -35,7 +35,7 @@ impl fmt::Display for ServerConfig {
             self.ip,
             self.description
                 .to_owned()
-                .unwrap_or("No description".to_string()),
+                .unwrap_or_else(|| "No description".to_string()),
             self.password,
             self.key_file
         )
