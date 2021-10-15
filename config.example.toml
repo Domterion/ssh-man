@@ -1,6 +1,12 @@
 [servers]
-        [servers.ovh]
-                ip = "51.222.139.35"
-                username = "dominic"
+        [servers.main]
+                # IP of the server
+                ip = "127.0.0.1"
+                # The username to login to
+                username = "root"
+                # An optional description of the server
                 description = "Main server"
-                key_file = "~/.ssh/id_rsa"
+                # The password for the server, optional
+                password = ""
+                # The path to the private key file to authenticate with, optional
+                key_file = ""
